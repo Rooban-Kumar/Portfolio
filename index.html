@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mechanical Product Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d5b97;
+            transition: background-color 0.5s ease;
+        }
+        
+        .header {
+            background-color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        
+        .profile {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile img:hover {
+            transform: scale(1.1);
+        }
+        
+        .skills {
+            padding: 40px;
+            background-color: #4780bd;
+        }
+        
+        .skills ul {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: center;
+        }
+        
+        .skills li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        
+        .buttons {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+            background-color: #1d5094;
+            color: white;
+        }
+        
+        .projects {
+            padding: 40px;
+        }
+        
+        .project {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .project img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        
+        .contact {
+            padding: 40px;
+            background-color: #4f79b9;
+        }
+        
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header">
+    <h1>Mechanical Product Developer</h1>
+    <button id="toggleTheme" class="button" style="background-color: #007bff; color: white;">Theme</button>
+</div>
+
+<!-- Profile Section -->
+<div class="profile">
+    <img src="c:\Users\12bio\Downloads\RK.jpg" alt="Profile Picture">
+    <h2>Rooban Kumar C M</h2>
+    <p>Innovative Mechanical Engineer specializing in product development, CAD design, and prototyping.</p>
+</div>
+
+<!-- Skills Section -->
+<div class="skills">
+    <h3>Technical Skills & Expertise</h3>
+    <ul>
+        <li><i class="fa-solid fa-cube"></i> CAD Design (SolidWorks, Fusion 360)</li>
+        <li><i class="fa-solid fa-gears"></i> Prototyping (3D Printing, CNC Machining)</li>
+        <li><i class="fa-solid fa-chart-line"></i> Data Analysis (Python, Excel)</li>
+        <li><i class="fa-solid fa-code"></i> Programming (Python, MATLAB)</li>
+        <li><i class="fa-solid fa-robot"></i> Robotics (Arduino, Raspberry Pi)</li>
+    </ul>
+</div>
+
+<!-- Buttons Section -->
+<div class="buttons">
+    <a href="#projects" style="text-decoration: none;">
+        <button class="button" style="background-color: #f3f3f6; color: rgb(5, 18, 90);">View Projects</button>
+    </a>
+    <a href="#contact" style="text-decoration: none;">
+        <button class="button" style="background-color: #eeeef5;color: rgb(33, 6, 106);">Contact Me</button>
+    </a>
+</div>
+
+<!-- Projects Section -->
+<div id="projects" class="projects">
+    <h3>PROJECTS</h3>
+    <div class="project">
+        <img src="c:\Users\12bio\Downloads\Screenshot 2024-11-21 125407.png" alt="Project 1">
+        <div>
+            <h4>PROJECT 1: Mechanical Prototype</h4>
+            <p>Developed mechanical prototypes using CAD software and 3D printing for various problems in my daily life.</p>
+        </div>
+    </div>
+    <div class="project">
+        <img src="c:\Users\12bio\Downloads\GLAUCOSCAN V2.png" alt="Project 2">
+        <div>
+            <h4>PROJECT 2: Product Design</h4>
+            <p>Designed new products line focusing on user experience and sustainability in various sectors<br> such for glaucoma patients, Knee pain patients to assist them Mechanically and to integrated Electronics.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="contact">
+    <h3>CONTACT</h3>
+    <div style="text-align: center;">
+        <a href="mailto:example@example.com" style="text-decoration: none; color: #0c0d0d;">
+            <i class="fa-solid fa-envelope"></i> roobankumar3.3@gmail.com
+        </a>
+        <br>
+        <a href="tel:+91 9952771160" style="text-decoration: none; color: #0f1112;">
+            <i class="fa-solid fa-phone"></i> +91 9952771160
+        </a>
+    </div>
+</div>
+
+<!-- Toggle Theme Script -->
+<script>
+    document.getElementById('toggleTheme').addEventListener('click', function() {
+        document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? '#f0f0f0' : 'black';
+        document.body.style.color = document.body.style.color === 'white' ? '#333' : 'white';
+    });
+</script>
+
+</body>
+</html>
