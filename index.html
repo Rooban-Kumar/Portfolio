@@ -1,189 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Mechanical Product Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d5b97;
-            transition: background-color 0.5s ease;
-        }
-        
-        .header {
-            background-color: #333;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-        
-        .profile {
-            text-align: center;
-            padding: 40px;
-        }
-        
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #007bff;
-            transition: transform 0.3s ease;
-        }
-        
-        .profile img:hover {
-            transform: scale(1.1);
-        }
-        
-        .skills {
-            padding: 40px;
-            background-color: #4780bd;
-        }
-        
-        .skills ul {
-            list-style-type: none;
-            padding-left: 0;
-            text-align: center;
-        }
-        
-        .skills li {
-            display: inline-block;
-            margin-right: 15px;
-        }
-        
-        .buttons {
-            text-align: center;
-            padding: 40px;
-        }
-        
-        .button {
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-            transition: background-color 0.3s ease;
-        }
-        
-        .button:hover {
-            background-color: #1d5094;
-            color: white;
-        }
-        
-        .projects {
-            padding: 40px;
-        }
-        
-        .project {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        
-        .project img {
-            width: 200px;
-            height: auto;
-            border-radius: 5px;
-            margin-right: 20px;
-        }
-        
-        .contact {
-            padding: 40px;
-            background-color: #4f79b9;
-        }
-        
-        @media (max-width: 768px) {
-            .project {
-                flex-direction: column;
-                align-items: center;
-            }
-            .project img {
-                margin-bottom: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<!-- Header Section -->
-<div class="header">
-    <h1>Mechanical Product Developer</h1>
-    <button id="toggleTheme" class="button" style="background-color: #007bff; color: white;">Theme</button>
-</div>
-
-<!-- Profile Section -->
-<div class="profile">
-    <img src="c:\Users\12bio\Downloads\RK.jpg" alt="Profile Picture">
-    <h2>Rooban Kumar C M</h2>
-    <p>Innovative Mechanical Engineer specializing in product development, CAD design, and prototyping.</p>
-</div>
-
-<!-- Skills Section -->
-<div class="skills">
-    <h3>Technical Skills & Expertise</h3>
-    <ul>
-        <li><i class="fa-solid fa-cube"></i> CAD Design (SolidWorks, Fusion 360)</li>
-        <li><i class="fa-solid fa-gears"></i> Prototyping (3D Printing, CNC Machining)</li>
-        <li><i class="fa-solid fa-chart-line"></i> Data Analysis (Python, Excel)</li>
-        <li><i class="fa-solid fa-code"></i> Programming (Python, MATLAB)</li>
-        <li><i class="fa-solid fa-robot"></i> Robotics (Arduino, Raspberry Pi)</li>
-    </ul>
-</div>
-
-<!-- Buttons Section -->
-<div class="buttons">
-    <a href="#projects" style="text-decoration: none;">
-        <button class="button" style="background-color: #f3f3f6; color: rgb(5, 18, 90);">View Projects</button>
-    </a>
-    <a href="#contact" style="text-decoration: none;">
-        <button class="button" style="background-color: #eeeef5;color: rgb(33, 6, 106);">Contact Me</button>
-    </a>
-</div>
-
-<!-- Projects Section -->
-<div id="projects" class="projects">
-    <h3>PROJECTS</h3>
-    <div class="project">
-        <img src="c:\Users\12bio\Downloads\Screenshot 2024-11-21 125407.png" alt="Project 1">
-        <div>
-            <h4>PROJECT 1: Mechanical Prototype</h4>
-            <p>Developed mechanical prototypes using CAD software and 3D printing for various problems in my daily life.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./assests/css/style.css" />
+    <!-- <link rel="stylesheet" href="mediaqueries.css" /> -->
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Rooban Kumar C M</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Rooban Kumar C M</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </div>
-    <div class="project">
-        <img src="c:\Users\12bio\Downloads\GLAUCOSCAN V2.png" alt="Project 2">
-        <div>
-            <h4>PROJECT 2: Product Design</h4>
-            <p>Designed new products line focusing on user experience and sustainability in various sectors<br> such for glaucoma patients, Knee pain patients to assist them Mechanically and to integrated Electronics.</p>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
-    </div>
-</div>
-
-<!-- Contact Section -->
-<div id="contact" class="contact">
-    <h3>CONTACT</h3>
-    <div style="text-align: center;">
-        <a href="mailto:example@example.com" style="text-decoration: none; color: #0c0d0d;">
-            <i class="fa-solid fa-envelope"></i> roobankumar3.3@gmail.com
-        </a>
-        <br>
-        <a href="tel:+91 9952771160" style="text-decoration: none; color: #0f1112;">
-            <i class="fa-solid fa-phone"></i> +91 9952771160
-        </a>
-    </div>
-</div>
-
-<!-- Toggle Theme Script -->
-<script>
-    document.getElementById('toggleTheme').addEventListener('click', function() {
-        document.body.style.backgroundColor = document.body.style.backgroundColor === 'black' ? '#f0f0f0' : 'black';
-        document.body.style.color = document.body.style.color === 'white' ? '#333' : 'white';
-    });
-</script>
-
-</body>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="assests/images/profile-pic.jpg" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Rooban Kumar C M</h1>
+        <p class="section__text__p2">Innovative Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="assests/images/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/rooban-kumar-c-m-7445ab302'"
+          />
+          <img
+            src="assests/images/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Rooban-Kumar'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="assests/images/profile-pic-2.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="assests/images/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Innovative Engineer</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="assests/images/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.E. Mechanical Engineering</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+             I am a simple person with a strong vision to improve myself both technically and as a human being to contribute to making the world a better place. As a Mechanical Engineer, I focus on sustainability and innovative design elements of my field and strive to learn new technologies across all fields of science each day. This ongoing learning journey enhances my self-worth and helps me align with my valuable vision.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="assests/images/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Innovative Engineer</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SolidWorks</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Fusion 360</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CATIA V5</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Innovative Engineer</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Arduino IDE</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>KiCad</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MatLab</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="assests/images/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="assests/images/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assests/images/H.A.R.P.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">H.A.R.P</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Linked In
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Drive
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assests/images/glaucoscan.jpg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">GlaucoScan</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Linked In
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Drive
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="assests/images/wall e.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Wall E</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Linked In
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Drive
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="assests/images/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="assests/images/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:roobankumar.3.3@protosem.tech">E Mail</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="assests/images/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/rooban-kumar-c-m-7445ab302">Linked In</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Rooban Kumar C M. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
